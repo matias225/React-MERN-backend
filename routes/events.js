@@ -18,7 +18,7 @@ router.use(jwtValidator);
 router.get('/', getEvents);
 
 // Crear evento
-router.post('/:id',
+router.post('/',
   [
     check('title', 'El titulo es obligatorio').not().isEmpty(),
     check('start', 'Fecha de inicio es obligatorio').custom(isDate),
